@@ -56,15 +56,18 @@ function clearGrid() {
 
 function eraserMode() {
     mode = "eraser";
-    modeDiv.textContent = "Mode: Eraser";
+    modeDiv.textContent = "Eraser";
+    modeDiv.style.color = "rgb(236, 184, 13)";
 }
 function normalMode() {
     mode = "normal";
-    modeDiv.textContent = "Mode: Normal";
+    modeDiv.textContent = "Normal";
+    modeDiv.style.color = "rgb(34, 140, 34)";
 }
 function rainbowMode() {
     mode = "rainbow";
-    modeDiv.textContent = "Mode: Rainbow";
+    modeDiv.textContent = "Rainbow";
+    modeDiv.style.color = "rgb(231, 106, 181)";
 }
 
 
@@ -80,7 +83,7 @@ changeBtn.addEventListener('click', createNewGrid);
 const clearBtn = document.querySelector(".clear");
 clearBtn.addEventListener('click', clearGrid);
 
-const modeDiv = document.querySelector(".mode");
+const modeDiv = document.querySelector(".mode span");
 
 const normalBtn = document.querySelector(".normal");
 normalBtn.addEventListener('click', normalMode);

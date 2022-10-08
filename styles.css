@@ -58,11 +58,15 @@ button {
     border-radius: 15px;
     font-family: arial;
     border-width: 0px;
+    cursor: pointer;
 }
 .secondary button {
     height: 45px;
     width: 180px;
     background-color: gray;
+}
+.secondary button:hover {
+    background-color: rgb(162, 160, 160);
 }
 .buttons {
     width: 510px;
@@ -77,12 +81,24 @@ button {
 .clear {
     background-color: rgb(223, 58, 58);
 }
+.clear:hover {
+    background-color: rgb(248, 73, 73);
+}
 .eraser {
     background-color: rgb(236, 184, 13);
+}
+.eraser:hover {
+    background-color: rgb(252, 199, 27);
 }
 .normal {
     background-color: rgb(34, 140, 34);
 }
+.normal:hover {
+    background-color: rgb(46, 180, 46);
+}
 .rainbow {
     background-color: rgb(231, 106, 181);
+}
+.rainbow:hover {
+    background-color: rgb(248, 114, 195);
 }

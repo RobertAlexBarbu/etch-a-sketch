@@ -37,9 +37,14 @@ function createNewGrid() {
         createGrid(n);
     }
 }
-
+function clearGrid() {
+    createGrid(n);
+}
 let click = false;
 let n = 16;
 createGrid(n);
 const changeBtn = document.querySelector(".secondary button");
 changeBtn.addEventListener('click', createNewGrid);
+
+const clearBtn = document.querySelector(".clear");
+clearBtn.addEventListener('click', clearGrid);

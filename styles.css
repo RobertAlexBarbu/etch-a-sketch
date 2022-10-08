@@ -13,7 +13,7 @@ body {
 .main {
     background-color: white;
     border-radius: 20px;
-    height: 90vh;
+    height: 92vh;
     width: 750px;
     display: flex;
     flex-direction: column;
@@ -49,13 +49,20 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-.info {
+.info, button {
     font-size: 18px;
+    font-weight: 600;
+}
+button {
+    color: white;
+    border-radius: 15px;
+    font-family: arial;
+    border-width: 0px;
 }
 .secondary button {
-    height: 40px;
-    width: 150px;
-    font-family: arial;
+    height: 45px;
+    width: 180px;
+    background-color: gray;
 }
 .buttons {
     width: 510px;
@@ -65,5 +72,17 @@ body {
 }
 .buttons button {
     width: 110px;
-    height: 40px;
+    height: 50px;
+}
+.clear {
+    background-color: rgb(223, 58, 58);
+}
+.eraser {
+    background-color: rgb(236, 184, 13);
+}
+.normal {
+    background-color: rgb(34, 140, 34);
+}
+.rainbow {
+    background-color: rgb(231, 106, 181);
 }

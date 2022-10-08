@@ -13,8 +13,8 @@ body {
 .main {
     background-color: white;
     border-radius: 20px;
-    height: 85vh;
-    width: 70vw;
+    height: 90vh;
+    width: 750px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -42,16 +42,25 @@ body {
 
 
 
-.size {
-    width: 500px;
+.secondary {
+    height: 7vh;
+    width: 510px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.size button {
+.secondary button {
     height: 40px;
     width: 150px;
-}
-button {
     font-family: arial;
+}
+.buttons {
+    width: 510px;
+    margin: 12px 0 17px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.buttons button {
+    width: 110px;
+    height: 40px;
 }

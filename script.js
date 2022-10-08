@@ -26,19 +26,20 @@ function squareEventStop() {
     click = false;
 }
 function createNewGrid() {
-    let n = window.prompt("Please introduce the new grid dimension:\nEX: If you introduce \"16\" => the new grid will be 16x16\nThe grid dimensions must be between 1 and 48");
+    n = window.prompt("Please introduce the new grid dimension:\nEX: If you introduce \"16\" => the new grid will be 16x16\nThe grid dimensions must be between 1 and 48");
     n = +n;
     if( n == null || n <= 0 || n > 48 || isNaN(n) == true) {
         window.alert("The grid dimensions must be between 1 and 48");
     }
     else {
-        const gridSize = document.querySelector(".main h3");
+        const gridSize = document.querySelector(".size");
         gridSize.textContent = `Grid Size: ${n}x${n}`;
         createGrid(n);
     }
 }
 
 let click = false;
-createGrid(16);
-const changeBtn = document.querySelector(".size button");
+let n = 16;
+createGrid(n);
+const changeBtn = document.querySelector(".secondary button");
 changeBtn.addEventListener('click', createNewGrid);

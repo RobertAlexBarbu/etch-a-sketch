@@ -8,22 +8,28 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    font-family: arial;
 }
 .main {
     background-color: white;
+    border-radius: 20px;
     height: 85vh;
-    width: 75vw;
+    width: 70vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 }
+
+
+
 .grid {
-    background-color: red;
+    background-color: white;
     height: 500px;
     width: 500px;
     display: flex;
     flex-direction: column;
+    border: 5px solid gray;
 }
 .row {
     flex: auto;
@@ -32,4 +38,20 @@ body {
 }
 .row div {
     flex: auto;
+}
+
+
+
+.size {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.size button {
+    height: 40px;
+    width: 150px;
+}
+button {
+    font-family: arial;
 }

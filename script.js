@@ -25,5 +25,5 @@ function createNewGrid() {
 }
 
 createGrid(16);
-const changeBtn = document.querySelector(".buttons button");
+const changeBtn = document.querySelector(".size button");
 changeBtn.addEventListener('click', createNewGrid);

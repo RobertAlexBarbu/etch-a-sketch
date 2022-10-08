@@ -14,7 +14,7 @@ function createGrid(n) {
 function createNewGrid() {
     let n = window.prompt("Please introduce the new grid dimension:\nEX: If you introduce \"16\" => the new grid will be 16x16\nThe grid dimensions must be between 1 and 48");
     n = +n;
-    if(typeof n !== "number" || n <= 0 || n > 48) {
+    if( n == null || n <= 0 || n > 48 || isNaN(n) == true) {
         window.alert("The grid dimensions must be between 1 and 48");
     }
     else {

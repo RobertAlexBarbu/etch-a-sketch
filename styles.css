@@ -49,6 +49,9 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+.info {
+    font-size: 18px;
+}
 .secondary button {
     height: 40px;
     width: 150px;

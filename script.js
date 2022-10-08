@@ -24,6 +24,12 @@ function squareEventDraw(e) {
         else if(mode == "eraser") {
             e.target.style.background = "white";
         }
+        if(mode == "rainbow") {
+            let a = Math.round(Math.random() * 255);
+            let b = Math.round(Math.random() * 255);
+            let c = Math.round(Math.random() * 255);
+            e.target.style.background = `rgb(${a}, ${b}, ${c})`;
+        }
     }
 }
 function squareEventStart() {
@@ -56,6 +62,10 @@ function normalMode() {
     mode = "normal";
     modeDiv.textContent = "Mode: Normal";
 }
+function rainbowMode() {
+    mode = "rainbow";
+    modeDiv.textContent = "Mode: Rainbow";
+}
 
 
 
@@ -78,4 +88,6 @@ normalBtn.addEventListener('click', normalMode);
 const eraserBtn = document.querySelector(".eraser");
 eraserBtn.addEventListener('click', eraserMode);
 
+const rainbowBtn = document.querySelector(".rainbow");
+rainbowBtn.addEventListener('click', rainbowMode);
 createGrid(n);

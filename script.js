@@ -1,5 +1,6 @@
 
 function createGrid(n) {
+    normalMode();
     const grid = document.querySelector(".grid");
     grid.textContent = "";
     for(let i = 0; i < n; i++) {
@@ -17,7 +18,13 @@ function createGrid(n) {
 }
 function squareEventDraw(e) {
     if(click == true) {
-    e.target.style.background = "black"; }
+        if(mode == "normal") {
+            e.target.style.background = "black"; 
+        }
+        else if(mode == "eraser") {
+            e.target.style.background = "white";
+        }
+    }
 }
 function squareEventStart() {
     click = true;
@@ -40,11 +47,35 @@ function createNewGrid() {
 function clearGrid() {
     createGrid(n);
 }
+
+function eraserMode() {
+    mode = "eraser";
+    modeDiv.textContent = "Mode: Eraser";
+}
+function normalMode() {
+    mode = "normal";
+    modeDiv.textContent = "Mode: Normal";
+}
+
+
+
 let click = false;
 let n = 16;
-createGrid(n);
+let mode = "normal";
+
+
 const changeBtn = document.querySelector(".secondary button");
 changeBtn.addEventListener('click', createNewGrid);
 
 const clearBtn = document.querySelector(".clear");
 clearBtn.addEventListener('click', clearGrid);
+
+const modeDiv = document.querySelector(".mode");
+
+const normalBtn = document.querySelector(".normal");
+normalBtn.addEventListener('click', normalMode);
+
+const eraserBtn = document.querySelector(".eraser");
+eraserBtn.addEventListener('click', eraserMode);
+
+createGrid(n);

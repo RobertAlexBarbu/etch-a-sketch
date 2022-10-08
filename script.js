@@ -1,3 +1,4 @@
+
 function createGrid(n) {
     const grid = document.querySelector(".grid");
     grid.textContent = "";
@@ -6,10 +7,23 @@ function createGrid(n) {
         row.classList.add("row");
         for(let j = 0; j < n; j++) {
             const square = document.createElement("div");
+            square.addEventListener('mousemove', squareEventDraw);
+            square.addEventListener('mousedown', squareEventStart);
+            square.addEventListener('mouseup', squareEventStop);
             row.appendChild(square);
         }
         grid.appendChild(row);
     }
+}
+function squareEventDraw(e) {
+    if(click == true) {
+    e.target.style.background = "black"; }
+}
+function squareEventStart() {
+    click = true;
+}
+function squareEventStop() {
+    click = false;
 }
 function createNewGrid() {
     let n = window.prompt("Please introduce the new grid dimension:\nEX: If you introduce \"16\" => the new grid will be 16x16\nThe grid dimensions must be between 1 and 48");
@@ -24,6 +38,7 @@ function createNewGrid() {
     }
 }
 
+let click = false;
 createGrid(16);
 const changeBtn = document.querySelector(".size button");
 changeBtn.addEventListener('click', createNewGrid);
